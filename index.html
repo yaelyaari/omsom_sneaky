@@ -1,0 +1,194 @@
+<html>
+<body>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 4000; height: 1000p;"></div>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    //data.addColumn('string', 'Answer');
+    data.addColumn('number', 'Count');
+    data.addRows([
+['Opening  (click:1)','Dashboard: DOMAIN STATUS (click:2)',201],
+['Dashboard: DOMAIN STATUS (click:2)','Dashboard: CLEANER TRAFFIC (click:3)',104],
+['Dashboard: CLEANER TRAFFIC (click:3)','Dashboard: FRAUD BY DEVICE (click:4)',48],
+['Opening  (click:1)','Fraud Analytics: BLOCKED IPs (click:2)',46],
+['Opening  (click:1)','Detection Rules: CLICK THRESHOLD RULES (click:2)',33],
+['Dashboard: FRAUD BY DEVICE (click:4)',"'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:5)'",32],
+['Opening  (click:1)','end (click:2)',29],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:5)'",'Dashboard: SAVINGS (click:6)',24],
+['Dashboard: DOMAIN STATUS (click:2)','Dashboard: FRAUD BY DEVICE (click:3)',21],
+['Dashboard: CLEANER TRAFFIC (click:3)','Dashboard: SAVINGS (click:4)',19],
+['Dashboard: SAVINGS (click:6)','Dashboard: THREAT LEVELS (click:7)',17],
+['Dashboard: DOMAIN STATUS (click:2)','Closing (click:3)',12],
+['Dashboard: DOMAIN STATUS (click:2)','Welcome to DASHBOARD (click:3)',11],
+['Dashboard: FRAUD BY DEVICE (click:4)','Dashboard: THREAT LEVELS (click:5)',10],
+['Dashboard: FRAUD BY DEVICE (click:3)',"'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:4)'",10],
+['Opening  (click:1)','Welcome to DASHBOARD (click:2)',9],
+['Dashboard: SAVINGS (click:4)','Dashboard: THREAT LEVELS (click:5)',8],
+['Welcome to DASHBOARD (click:2)','Dashboard: DOMAIN STATUS (click:3)',8],
+['Fraud Analytics: BLOCKED IPs (click:2)','Fraud Analytics: KEYWORDS (click:3)',7],
+['Dashboard: CLEANER TRAFFIC (click:3)','Welcome to DASHBOARD (click:4)',7],
+['Dashboard: THREAT LEVELS (click:5)',"'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:6)'",7],
+['Dashboard: SAVINGS (click:6)','Welcome to DASHBOARD (click:7)',6],
+['Something else... (click:4)','Welcome to DETECTION RULES (click:5)',6],
+['Dashboard: THREAT LEVELS (click:7)','Welcome to DASHBOARD (click:8)',6],
+['Dashboard: DOMAIN STATUS (click:2)','Opening  (click:3)',6],
+['Intro (click:1)','Dashboard (click:2)',5],
+['Intro (click:1)','Analytics (click:2)',5],
+['Something else... (click:7)','Welcome to FRAUD ANALYTICS (click:8)',5],
+['Detection Rules: CLICK THRESHOLD RULES (click:2)','Closing (click:3)',5],
+['Dashboard: SAVINGS (click:6)','Something else... (click:7)',5],
+['Welcome to DASHBOARD (click:3)','Dashboard: CLEANER TRAFFIC (click:4)',5],
+['Fraud Analytics: BLOCKED IPs (click:2)','end (click:3)',5],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:5)'",'Dashboard: THREAT LEVELS (click:6)',5],
+['Detection Rules: CLICK THRESHOLD RULES (click:2)','Opening  (click:3)',4],
+['Fraud Analytics: BLOCKED IPs (click:2)','Welcome to DASHBOARD (click:3)',4],
+['Welcome to FRAUD ANALYTICS (click:10)','Fraud Analytics: BLOCKED IPs (click:11)',4],
+['Detection Rules: CLICK THRESHOLD RULES (click:2)','Detection Rules: DETECT IPs BY DEVICE IDs (click:3)',4],
+['Welcome to DETECTION RULES (click:5)','Detection Rules: CLICK THRESHOLD RULES (click:6)',4],
+['Detection Rules: CLICK THRESHOLD RULES (click:2)','Detection Rules: ADVANCED MODE (click:3)',4],
+['Dashboard: THREAT LEVELS (click:6)',"'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:7)'",4],
+['Dashboard: THREAT LEVELS (click:5)','Closing (click:6)',4],
+['Welcome to DASHBOARD (click:3)','Something else... (click:4)',4],
+['Opening  (click:3)','Fraud Analytics: BLOCKED IPs (click:4)',4],
+['Dashboard: FRAUD BY DEVICE (click:3)','Dashboard: THREAT LEVELS (click:4)',4],
+['Dashboard: THREAT LEVELS (click:7)','Dashboard: FRAUD BY DEVICE (click:8)',4],
+['Welcome to DASHBOARD (click:10)','Something else... (click:11)',4],
+['Welcome to DASHBOARD (click:8)','Something else... (click:9)',4],
+['Something else... (click:9)','Welcome to FRAUD ANALYTICS (click:10)',4],
+['Dashboard: SAVINGS (click:7)','Welcome to DASHBOARD (click:8)',4],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:4)'",'Dashboard: SAVINGS (click:5)',4],
+['Welcome to DASHBOARD (click:4)','Dashboard: DOMAIN STATUS (click:5)',4],
+['Fraud Analytics: BLOCKED IPs (click:2)','Something else... (click:3)',4],
+['Fraud Analytics: MULTI-CLICK RATE (click:15)','Fraud Analytics: IP RANGES (click:16)',4],
+['Dashboard: DOMAIN STATUS (click:3)','Dashboard: CLEANER TRAFFIC (click:4)',3],
+['Dashboard: CLEANER TRAFFIC (click:4)','Dashboard: FRAUD BY DEVICE (click:5)',3],
+['Dashboard: DOMAIN STATUS (click:3)','Dashboard: FRAUD BY DEVICE (click:4)',3],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:6)'",'Dashboard: SAVINGS (click:7)',3],
+['Something else... (click:10)','Welcome to DETECTION RULES (click:11)',3],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:6)'",'Closing (click:7)',3],
+['Welcome to FRAUD ANALYTICS (click:8)','Fraud Analytics: KEYWORDS (click:9)',3],
+['Welcome to DETECTION RULES (click:11)','Detection Rules: CLICK THRESHOLD RULES (click:12)',3],
+['Dashboard: CLEANER TRAFFIC (click:5)','Dashboard: SAVINGS (click:6)',3],
+['Dashboard: THREAT LEVELS (click:7)','Closing (click:8)',3],
+['Welcome to DASHBOARD (click:7)','Dashboard: DOMAIN STATUS (click:8)',3],
+['Welcome to DASHBOARD (click:7)','Something else... (click:8)',3],
+['Welcome to DASHBOARD (click:6)','Dashboard: SAVINGS (click:7)',3],
+['Fraud Analytics: IP RANGES (click:16)','Fraud Analytics: DEVICES (click:17)',3],
+['Dashboard: DOMAIN STATUS (click:2)','Something else... (click:3)',3],
+['Fraud Analytics: DEVICES (click:17)','Fraud Analytics: PLACEMENTS (click:18)',3],
+['Fraud Analytics: PLACEMENTS (click:18)','Fraud Analytics: CLICKS REPORT (click:19)',3],
+['Fraud Analytics: BLOCKED IPs (click:2)','Opening  (click:3)',3],
+['Welcome to DASHBOARD (click:12)','Something else... (click:13)',3],
+['Dashboard: THREAT LEVELS (click:9)','Welcome to DASHBOARD (click:10)',3],
+['Welcome to DASHBOARD (click:3)','Dashboard: DOMAIN STATUS (click:4)',3],
+['Welcome to DASHBOARD (click:10)','Dashboard: CLEANER TRAFFIC (click:11)',3],
+['Dashboard: SAVINGS (click:5)','Dashboard: THREAT LEVELS (click:6)',3],
+['Dashboard: SAVINGS (click:4)','Welcome to DASHBOARD (click:5)',3],
+['Dashboard: CLEANER TRAFFIC (click:3)','Something else... (click:4)',3],
+['Dashboard: THREAT LEVELS (click:5)','Welcome to DASHBOARD (click:6)',3],
+['Fraud Analytics: BLOCKED IPs (click:11)','Fraud Analytics: COUNTRIES (click:12)',3],
+['Fraud Analytics: BLOCKED IPs (click:2)','Fraud Analytics: COUNTRIES (click:3)',3],
+['Welcome to ClickCease  (click:1)','Your Dashboard (click:2)',2],
+['Intro (click:1)','Detection Rules (click:2)',2],
+['Dashboard: THREAT LEVELS (click:8)','Welcome to DASHBOARD (click:9)',2],
+['Analytics (click:2)','Intro (click:3)',2],
+['Welcome to DETECTION RULES (click:13)','Detection Rules: CLICK THRESHOLD RULES (click:14)',2],
+['Welcome to FRAUD ANALYTICS (click:4)','Fraud Analytics: CAMPAIGNS (click:5)',2],
+['Dashboard: CLEANER TRAFFIC (click:4)','Dashboard: DOMAIN STATUS (click:5)',2],
+['Something else... (click:10)','Welcome to FRAUD ANALYTICS (click:11)',2],
+['Fraud Analytics: KEYWORDS (click:17)','Welcome to FRAUD ANALYTICS (click:18)',2],
+['Opening  (click:1)','Welcome to DETECTION RULES (click:2)',2],
+['Dashboard: SAVINGS (click:4)','Something else... (click:5)',2],
+['Detection Rules: CLICK THRESHOLD RULES (click:6)','Detection Rules: DETECT IPs BY DEVICE IDs (click:7)',2],
+['Welcome to DASHBOARD (click:7)','Dashboard: CLEANER TRAFFIC (click:8)',2],
+['Dashboard: DOMAIN STATUS (click:4)','Something else... (click:5)',2],
+['Something else... (click:11)','Welcome to DASHBOARD (click:12)',2],
+['Dashboard: THREAT LEVELS (click:8)','Closing (click:9)',2],
+['Fraud Analytics: CAMPAIGNS (click:14)','Fraud Analytics: MULTI-CLICK RATE (click:15)',2],
+['Opening  (click:3)','Dashboard: DOMAIN STATUS (click:4)',2],
+['Fraud Analytics: CLICKS REPORT (click:19)','Something else... (click:20)',2],
+['Welcome to FRAUD ANALYTICS (click:16)','Fraud Analytics: KEYWORDS (click:17)',2],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:4)'",'Welcome to DASHBOARD (click:5)',2],
+['Dashboard: SAVINGS (click:4)','Dashboard: FRAUD BY DEVICE (click:5)',2],
+['Fraud Analytics: BLOCKED IPs (click:4)','Fraud Analytics: KEYWORDS (click:5)',2],
+['Dashboard: FRAUD BY DEVICE (click:5)','Closing (click:6)',2],
+['Detection Rules: ADVANCED MODE (click:13)','Detection Rules: CLICK THRESHOLD RULES (click:14)',2],
+['Something else... (click:4)','Welcome to DASHBOARD (click:5)',2],
+['Welcome to DASHBOARD (click:8)','Dashboard: CLEANER TRAFFIC (click:9)',2],
+['Welcome to DASHBOARD (click:5)','Dashboard: DOMAIN STATUS (click:6)',2],
+['Fraud Analytics: KEYWORDS (click:6)','Fraud Analytics: MULTI-CLICK RATE (click:7)',2],
+['Welcome to DASHBOARD (click:8)','Dashboard: THREAT LEVELS (click:9)',2],
+['Something else... (click:13)','Welcome to FRAUD ANALYTICS (click:14)',2],
+['Something else... (click:11)','Welcome to FRAUD ANALYTICS (click:12)',2],
+['Dashboard: THREAT LEVELS (click:4)',"'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:5)'",2],
+['Welcome to FRAUD ANALYTICS (click:12)','Fraud Analytics: BLOCKED IPs (click:13)',2],
+['Welcome to DASHBOARD (click:4)','Dashboard: CLEANER TRAFFIC (click:5)',2],
+['Welcome to DASHBOARD (click:4)','Dashboard: THREAT LEVELS (click:5)',2],
+['Welcome to DETECTION RULES (click:8)','Detection Rules: CLICK THRESHOLD RULES (click:9)',2],
+['Dashboard: THREAT LEVELS (click:7)',"'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:8)'",2],
+['Fraud Analytics: COUNTRIES (click:12)','Fraud Analytics: KEYWORDS (click:13)',2],
+['Dashboard: THREAT LEVELS (click:6)','Welcome to DASHBOARD (click:7)',2],
+['Welcome to DASHBOARD (click:9)','Something else... (click:10)',2],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:7)'",'end (click:8)',2],
+['Dashboard: SAVINGS (click:4)','Closing (click:5)',2],
+['Dashboard: CLEANER TRAFFIC (click:11)','Welcome to DASHBOARD (click:12)',2],
+['Welcome to DETECTION RULES (click:1)','Detection Rules: ADVANCED MODE (click:2)',2],
+['Welcome to FRAUD ANALYTICS (click:6)','Fraud Analytics: KEYWORDS (click:7)',2],
+['Fraud Analytics: KEYWORDS (click:13)','Fraud Analytics: CAMPAIGNS (click:14)',2],
+['Dashboard: THREAT LEVELS (click:5)','end (click:6)',2],
+['Something else... (click:11)','Welcome to DETECTION RULES (click:12)',2],
+['Fraud Analytics: BLOCKED IPs (click:5)','Fraud Analytics: KEYWORDS (click:6)',2],
+['Something else... (click:5)','Welcome to DETECTION RULES (click:6)',2],
+['Welcome to DASHBOARD (click:8)','Dashboard: DOMAIN STATUS (click:9)',2],
+["'Dashboard: CAMPAIGNS, COUNTRIES, FRAUDTYPE (click:7)'",'Dashboard: THREAT LEVELS (click:8)',2],
+['Something else... (click:3)','Welcome to DASHBOARD (click:4)',2],
+['Dashboard: FRAUD BY DEVICE (click:8)','Welcome to DASHBOARD (click:9)',2],
+['Something else... (click:18)','Welcome to DETECTION RULES (click:19)',2],
+['Something else... (click:3)','Welcome to FRAUD ANALYTICS (click:4)',2],
+['Something else... (click:12)','Welcome to DETECTION RULES (click:13)',2],
+['Something else... (click:5)','Welcome to FRAUD ANALYTICS (click:6)',2],
+['Something else... (click:3)','Welcome to DETECTION RULES (click:4)',2],
+['Detection Rules: DETECT IPs BY DEVICE IDs (click:6)','Detection Rules: BLOCK IPs BY COUNTRIES (click:7)',2],
+['Fraud Analytics: KEYWORDS (click:9)','Something else... (click:10)',2],
+['Dashboard: THREAT LEVELS (click:5)','Dashboard: FRAUD BY DEVICE (click:6)',2],
+['Dashboard: THREAT LEVELS (click:6)','Closing (click:7)',2],
+['Detection Rules: DETECT IPs BY DEVICE IDs (click:7)','Detection Rules: BLOCK IPs BY COUNTRIES (click:8)',2],
+    ]);
+
+    // Set chart options
+    var options = {
+      width: 40000,
+      sankey: { node: { nodePadding: 400 } },
+    };
+    
+    // Set colors
+    var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+                  '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+    var options = {
+      height: 4000,
+      sankey: {
+        node: {
+          colors: colors
+        },
+        link: {
+          colorMode: 'gradient',
+          colors: colors
+        }
+      }
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+</body>
+</html>
